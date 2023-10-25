@@ -32,3 +32,7 @@ Then, you can run the Jupyter Notebooks to calculate z0 from the processed point
 The Leave-One-Out Cross-Validation procedure for training the random forest with and without the mangrove sites is in Mangrove_LOOCV.ipynb.
 
 Lastly, the notebook used to plot the point cloud figures is z0_Figures.ipynb.
+
+If you use any of the processing scripts, notebooks, or the point clouds, please cite the following paper:
+
+Citation forthcoming...
