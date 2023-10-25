@@ -1,0 +1,29 @@
+[
+    {
+        "type":"readers.text",
+        "filename":"PKEY_TLS.txt",
+        "separator": ",",
+        "header":"X, Y, Z",
+        "skip": 1
+    },
+    {
+        "type":"filters.transformation",
+        "matrix":"1  0  0  246060.67  0  1  0  168839.46  0  0  1  31.60  0  0  0  1"
+    }, 
+    {
+        "type":"filters.crop",
+        "bounds":"([246114.59, 246124.59], [168839.55, 168849.55])"
+    },
+    {
+        "type":"filters.smrf",
+        "cell":0.1,
+        "window":1.0
+    },
+    {
+        "type":"filters.hag_nn"
+    },
+    {
+        "type":"writers.text",
+        "filename":"PKEY_TLS_10x10.xyzch"
+    }
+]

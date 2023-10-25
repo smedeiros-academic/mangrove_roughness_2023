@@ -1,0 +1,33 @@
+[
+    {
+        "type":"readers.text",
+        "filename":"CKEY_TLS.txt",
+        "separator": ",",
+        "header":"X, Y, Z",
+        "skip": 1
+    },
+    {
+        "type":"filters.transformation",
+        "matrix":"1  0  0  236203.47  0  1  0  172906.65  0  0  1  22.06  0  0  0  1"
+    }, 
+    {
+        "type":"filters.crop",
+        "bounds":"([236352.41, 236362.41], [172954.91, 172964.91])"
+    },
+    {
+        "type":"filters.relaxationdartthrowing",
+        "count":30000000
+    },
+    {
+        "type":"filters.smrf",
+        "cell":0.1,
+        "window":1.0
+    },
+    {
+        "type":"filters.hag_nn"
+    },
+    {
+        "type":"writers.text",
+        "filename":"CKEY_TLS_10x10.xyzch"
+    }
+]

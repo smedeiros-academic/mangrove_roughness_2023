@@ -1,0 +1,36 @@
+[
+    {
+        "type":"readers.text",
+        "filename":"IEPK_TLS.txt",
+        "separator": ",",
+        "header":"X, Y, Z",
+        "skip": 1
+    },
+    {
+        "type":"filters.transformation",
+        "matrix":"1  0  0  246565.40  0  1  0  168984.49  0  0  1  31.12  0  0  0  1"
+    }, 
+    {
+        "type":"filters.crop",
+        "bounds":"([246558.61, 246568.61], [168981.47, 168991.47])"
+    },
+    {
+        "type":"filters.outlier"
+    },
+    {
+        "type":"filters.smrf",
+        "cell":0.1,
+        "window":1.0
+    },
+    {
+        "type":"filters.hag_nn"
+    },
+    {
+        "type":"filters.range",
+        "limits":"HeightAboveGround[0.0:]"
+    },
+    {
+        "type":"writers.text",
+        "filename":"IEPK_TLS_10x10.xyzch"
+    }
+]
